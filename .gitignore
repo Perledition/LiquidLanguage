@@ -11,6 +11,7 @@ build/
 
 # model logs
 mlruns/
+ml-runs/
 mlartifacts/
 lightning_logs/
 
