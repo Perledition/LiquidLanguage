@@ -80,6 +80,10 @@ class HarryPotterDataset(Dataset):
             torch.tensor(target, dtype=torch.long).to(self.device)
         )
     
+    def encode(self, text):
+        """Helper method to encode text to token ids"""
+        return self.tokenizer.encode(text).ids
+    
     def decode(self, token_ids):
         """Helper method to decode token ids back to text"""
         return self.tokenizer.decode(token_ids)
